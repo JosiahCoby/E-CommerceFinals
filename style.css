@@ -1,0 +1,128 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #dfcc89;
+    overflow-x: hidden;
+    background: #000e12;
+}
+
+.wrapper{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: #000e12;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	min-height: 100vh;
+	width: 100%;
+  }
+  .testimonial{
+	padding: 30px 100px;
+  }
+  article h1{
+	font-size: 50px;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-top: 0;
+  }
+  article h1::after{
+	height: 5px;
+	width: 225px;
+	background-color: #000e12;
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+  }
+  article img{
+	height: 300px;
+	width: 300px;
+	border: 2px solid #000e12;
+	border-radius: 50%;
+	margin-top: 0px;
+  }
+  blockquote{
+	font-family: sans-serif;
+	font-size: 22px;
+	margin-top: 30px;
+  }
+.back2{
+	margin: auto;
+	padding: 40px;
+	width: 80%;
+	height: 735px;
+	background: #dfcc89;
+}
+article h5{
+	text-transform: uppercase;
+	font-size: 24px;
+	margin-top: 30px;
+}
+
+/* carousel */
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+        margin-right: initial;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+/* end of carousel*/
